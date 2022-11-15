@@ -1,0 +1,38 @@
+= Measures
+
+Bibliothèque pour la représentation et la conversion d'unités de mesures physiques (volumes et longueurs).
+
+Unités de volume prises en compte (classe abstraite `Volume`) :
+
+- gallon (classe `Gallon`),
+- litre (classe `Litre`).
+
+Unités de longueur prises en compte (classe abstraite `Length`) :
+
+- pied (classe `Foot`),
+- pouce (classe `Inch`),
+- mètre (classe `Meter`).
+
+== Compilation et test
+
+Utiliser Maven :
+
+```
+mvn package
+```
+
+== Exemples
+
+
+On crée une quantité avec l'unité de son choix, par exemple en pieds :
+
+```java
+Foot foot = new Foot(1);
+```
+
+Puis on peut convertir cette distance en une autre unité, par exemple en mètres ou en pouces, avec les méthodes dédiées :
+
+```java
+Meter m = foot.toMeter();
+Inch i = foot.toInch();
+```
